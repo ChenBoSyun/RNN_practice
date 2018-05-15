@@ -98,6 +98,8 @@ def corpus_save(x_train , x_val , y_train , y_val):
     corpus['x_val'] = x_val
     corpus['y_train'] = y_train
     corpus['y_val'] = y_val
+    corpus['test_x'] = test_x
+    corpus['test_y'] = test_y
     with open('corpus.pickle', 'wb') as handle:
         pickle.dump(corpus , handle , protocol=pickle.HIGHEST_PROTOCOL)
 
