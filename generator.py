@@ -89,10 +89,10 @@ def data_preprocess(questions,answers):
     print(test_x.shape)
     print(test_y.shape)
     
-    return x_train , x_val , y_train , y_val
+    return x_train , x_val , y_train , y_val , test_x , test_y
 
 #使用pickle 將產生的data存起來
-def corpus_save(x_train , x_val , y_train , y_val):
+def corpus_save(x_train , x_val , y_train , y_val , test_x , test_y):
     corpus = {}
     corpus['x_train'] = x_train
     corpus['x_val'] = x_val
@@ -107,7 +107,7 @@ def corpus_save(x_train , x_val , y_train , y_val):
 if __name__ == "__main__":
     
     questions,answers = data_generate()
-    x_train , x_val , y_train , y_val = data_preprocess(questions,answers)
-    corpus_save(x_train , x_val , y_train , y_val)
+    x_train , x_val , y_train , y_val , test_x , test_y = data_preprocess(questions,answers)
+    corpus_save(x_train , x_val , y_train , y_val , test_x , test_y)
     print("data generation complete")
 
