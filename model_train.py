@@ -8,8 +8,6 @@ from keras.models import Sequential
 from keras import layers
 from keras.callbacks import History
 import numpy as np
-from six.moves import range
-import matplotlib.pyplot as plt
 import pickle
 import char_table
 
